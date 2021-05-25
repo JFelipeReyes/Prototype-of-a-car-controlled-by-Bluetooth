@@ -6127,6 +6127,11 @@ void PIN_MANAGER_Initialize(void)
     LATC = 0x00;
 
 
+    ANSELC = 0x00 ;
+    ANSELB = 0x00 ;
+    ANSELA = 0x00 ;
+
+
 
     TRISBbits.TRISB4 = 0;
     TRISBbits.TRISB6 = 0;
@@ -6162,32 +6167,6 @@ void main(void)
                dato_rx = UART_read();
 
         if (dato_rx == 'A')
-        {
-
-                PORTBbits.RB4 = 1;
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;
-                PORTCbits.RC5 = 1;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
-
-        }
-
-        else if (dato_rx == 'H')
-        {
-
-                PORTBbits.RB4 = 1;
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;
-                PORTCbits.RC5 = 1;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
-
-        }
-
-        else if (dato_rx == 'I')
         {
 
                 PORTBbits.RB4 = 1;

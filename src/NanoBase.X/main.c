@@ -58,10 +58,15 @@ uint16_t v_dutyCycle = 0;
 ///////////// DECLARACI?N DE FUNCIONES Y PROCEDIMIENTOS ///////////////////
 void PIN_MANAGER_Initialize(void)
 {
-  // LATx registers
+    // LATx registers
     LATA = 0x00;
     LATB = 0x00;
     LATC = 0x00;
+
+    // registros ANSELx
+    ANSELC = 0x00 ;
+    ANSELB = 0x00 ;
+    ANSELA = 0x00 ;
 
     // TRISx registers
     
@@ -104,32 +109,6 @@ void main(void)
                 PORTBbits.RB4 = 1;                       
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0; 
-                PORTCbits.RC4 = 0;          
-                PORTCbits.RC5 = 1;          
-                PORTCbits.RC6 = 0;          
-                PORTCbits.RC7 = 0; 
-            
-        }
-        
-        else if (dato_rx == 'H') // move forward 75%
-        {
-                
-                PORTBbits.RB4 = 1;                  
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;          
-                PORTCbits.RC5 = 1;          
-                PORTCbits.RC6 = 0;          
-                PORTCbits.RC7 = 0; 
-            
-        }
-        
-        else if (dato_rx == 'I') // move forward 100%
-        {
-                
-                PORTBbits.RB4 = 1;                        
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0;
                 PORTCbits.RC4 = 0;          
                 PORTCbits.RC5 = 1;          
                 PORTCbits.RC6 = 0;          

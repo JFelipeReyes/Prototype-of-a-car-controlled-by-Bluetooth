@@ -13,20 +13,20 @@
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "59 /home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/NanoBase.X/main.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"80
+"85
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"90
+"95
 [v _main main `(v  1 e 1 0 ]
-[s S130 . 1 `uc 1 . 1 0 :4:0 
+[s S133 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 RB4 1 0 :1:4 
 `uc 1 RB5 1 0 :1:5 
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
 "510 /opt/microchip/mplabx/v5.40/packs/Microchip/PIC16F1xxxx_DFP/1.4.119/xc8/pic/include/proc/pic16f15244.h
-[u S136 . 1 `S130 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES136  1 e 1 @13 ]
-[s S145 . 1 `uc 1 RC0 1 0 :1:0 
+[u S139 . 1 `S133 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES139  1 e 1 @13 ]
+[s S148 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -36,17 +36,17 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "552
-[u S154 . 1 `S145 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES154  1 e 1 @14 ]
-[s S112 . 1 `uc 1 . 1 0 :4:0 
+[u S157 . 1 `S148 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES157  1 e 1 @14 ]
+[s S115 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRISB4 1 0 :1:4 
 `uc 1 TRISB5 1 0 :1:5 
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "661
-[u S118 . 1 `S112 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES118  1 e 1 @19 ]
+[u S121 . 1 `S115 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES121  1 e 1 @19 ]
 [s S22 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -113,12 +113,18 @@
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
 "5884
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
-"90 /home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/NanoBase.X/main.c
+"8087
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"8472
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"8784
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"95 /home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/NanoBase.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"95
+"100
 [v main@dato_rx dato_rx `uc  1 a 1 1 ]
-"203
+"182
 } 0
 "15 /home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/NanoBase.X/UART.h
 [v _UART_read UART_read `(uc  1 e 1 0 ]
@@ -128,10 +134,10 @@
 "59 /home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/NanoBase.X/main.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"76
+"81
 } 0
-"80
+"85
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"85
+"90
 } 0

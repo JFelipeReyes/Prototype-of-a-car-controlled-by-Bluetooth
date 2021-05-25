@@ -169,25 +169,25 @@ void main(void)
         else if (dato_rx == 'D') //right turn
         {
                 PWM4_LoadDutyValue(dutyCycle50);
-                PORTBbits.RB4 = 0;                        
+                PORTBbits.RB4 = 1;                        
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;          
+                PORTCbits.RC4 = 1;          
                 PORTCbits.RC5 = 0;          
                 PORTCbits.RC6 = 0;          
-                PORTCbits.RC7 = 0; 
+                PORTCbits.RC7 = 1; 
         }
         
         else if (dato_rx == 'B') //left turn
         {
                 PWM4_LoadDutyValue(dutyCycle50);
                 PORTBbits.RB4 = 0;                        
-                PORTBbits.RB6 = 0;
+                PORTBbits.RB6 = 1;
                 PORTBbits.RB7 = 0;
                 PORTCbits.RC4 = 0;          
-                PORTCbits.RC5 = 0;          
+                PORTCbits.RC5 = 1;          
                 PORTCbits.RC6 = 0;          
-                PORTCbits.RC7 = 0; 
+                PORTCbits.RC7 = 1; 
         }
         
         else if (dato_rx == '0') //stop

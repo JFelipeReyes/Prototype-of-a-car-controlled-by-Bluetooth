@@ -17,7 +17,7 @@ char UART_read(void)
     if (PIR1bits.RC1IF == 1)
         return RC1REG;
     else
-        return 0;
+        return '0';
 }
 
 void UART_write(char dato)

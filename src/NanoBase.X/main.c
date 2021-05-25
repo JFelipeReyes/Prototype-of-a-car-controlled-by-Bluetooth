@@ -49,12 +49,7 @@
 ///////////////
 
 ///////////// VARIABLES GLOBALES  //////////////////
-
-uint16_t dutyCycle50 = 32768;
-uint16_t dutyCycle75 = 49152;
-uint16_t dutyCycle100 = 65500;
-
-uint16_t v_dutyCycle = 0;
+int stop = 0;
 ///////////// DECLARACI?N DE FUNCIONES Y PROCEDIMIENTOS ///////////////////
 void PIN_MANAGER_Initialize(void)
 {
@@ -97,7 +92,7 @@ void main(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     
-       char dato_rx;
+       char dato_rx = stop ;
     
     while(1){
        

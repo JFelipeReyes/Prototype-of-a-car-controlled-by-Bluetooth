@@ -6068,7 +6068,7 @@ char UART_read(void)
     if (PIR1bits.RC1IF == 1)
         return RC1REG;
     else
-        return 0;
+        return '0';
 }
 
 void UART_write(char dato)
@@ -6112,12 +6112,8 @@ void UART_printf(unsigned char *cadena)
 
 
 #pragma config CP = OFF
-# 53 "main.c"
-uint16_t dutyCycle50 = 32768;
-uint16_t dutyCycle75 = 49152;
-uint16_t dutyCycle100 = 65500;
-
-uint16_t v_dutyCycle = 0;
+# 52 "main.c"
+int stop = 0;
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -6160,7 +6156,7 @@ void main(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
 
-       char dato_rx;
+       char dato_rx = stop ;
 
     while(1){
 

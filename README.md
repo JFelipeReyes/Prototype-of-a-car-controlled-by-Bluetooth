@@ -7,7 +7,7 @@ As its title says it is a prototype, it can be the basis for the development of 
 
 # How to use?
 
-Initially it must be ensured that the entire device is powered by a source of at least 5 volts to ensure proper operation of the device, as a step to follow would be to open the application developed by the working group and connect your mobile device to the Bluetooth module used in the assembly, it only remains to drive using the 3 speeds with which the device has to move forward, turns and reverse are limited to half the power, but thanks to the configuration perform turns on the same axis facilitating maneuvering in tight places.
+Initially it must be ensured that the entire device is powered by a source of at least 5 volts to ensure proper operation of the device, as a step to follow would be to open the application developed by the working group and connect your mobile device to the Bluetooth module used in the assembly, thanks to the configuration perform turns on the same axis facilitating maneuvering in tight places.
 
 # How to install it?
 

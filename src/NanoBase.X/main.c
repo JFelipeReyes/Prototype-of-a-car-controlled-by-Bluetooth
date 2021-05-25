@@ -42,26 +42,29 @@
 #pragma config CP = OFF    // User Program Flash Memory Code Protection bit->User Program Flash Memory code protection is disabled
 
 
+
 ///////////// DEFINICIONES  //////////////////
 #define _XTAL_FREQ 1000000
-
 #define ACQ_US_DELAY 10
 ///////////////
 
 ///////////// VARIABLES GLOBALES  //////////////////
-uint16_t dutyCycle50 = 50;
-uint16_t dutyCycle75 = 75;
-uint16_t dutyCycle100 = 100;
 
+uint16_t dutyCycle50 = 32768;
+uint16_t dutyCycle75 = 49152;
+uint16_t dutyCycle100 = 65500;
+
+uint16_t v_dutyCycle = 0;
 ///////////// DECLARACI?N DE FUNCIONES Y PROCEDIMIENTOS ///////////////////
-
-void PIN_MANAGER_Initialize(void) {
-    // LATx registers
+void PIN_MANAGER_Initialize(void)
+{
+  // LATx registers
     LATA = 0x00;
     LATB = 0x00;
     LATC = 0x00;
 
     // TRISx registers
+    
     TRISBbits.TRISB4 = 0; // Definiendo puerto B4 como salida digital
     TRISBbits.TRISB6 = 0; // Definiendo puerto B6 como salida digital
     TRISBbits.TRISB7 = 0; // Definiendo puerto B7 como salida digital
@@ -69,54 +72,35 @@ void PIN_MANAGER_Initialize(void) {
     TRISCbits.TRISC5 = 0; // Definiendo puerto C5 como salida digital
     TRISCbits.TRISC6 = 0; // Definiendo puerto C6 como salida digital
     TRISCbits.TRISC7 = 0; // Definiendo puerto C7 como salida digital
+    
+    }
 
-}
 
-void OSCILLATOR_Initialize(void) {
-    OSCEN = 0x00; // MFOEN disabled; LFOEN disabled; ADOEN disabled; HFOEN disabled;
-    OSCFRQ = 0x00; // HFFRQ0 1_MHz
+
+void OSCILLATOR_Initialize(void)
+{
+    OSCEN = 0x00;                                                               // MFOEN disabled; LFOEN disabled; ADOEN disabled; HFOEN disabled;
+    OSCFRQ = 0x00;                                                              // HFFRQ0 1_MHz
     OSCTUNE = 0x00;
 }
 
-void TMR2_Initialize(void) {
-    T2CLKCON = 0x01; // T2CS FOSC/4;
-    T2HLT = 0x00; // T2PSYNC Not Synchronized; T2MODE Software control; T2CKPOL Rising Edge; T2CKSYNC Not Synchronized;
-    T2RST = 0x00;
-    T2PR = 249;
-    T2TMR = 0x00;
-    PIR1bits.TMR2IF = 0; // Clearing IF flag.
-    T2CON = 0b10000000; // T2CKPS 1:1; T2OUTPS 1:1; TMR2ON on;
-}
-
-void PWM4_Initialize(void) {
-    PWM4CON = 0x90; // PWM4POL active_low; PWM3EN enabled;
-    PWM4DCH = 0x3E;
-    PWM4DCL = 0x40;
-}
-
-void PWM4_LoadDutyValue(uint16_t dutyValue) {
-    PWM4DCH = (dutyValue & 0x03FC) >> 2; // Writing to 8 MSBs of PWM duty cycle in PWMDCH register
-    PWM4DCL = (dutyValue & 0x0003) << 6; // Writing to 2 LSBs of PWM duty cycle in PWMDCL register
-}
 /////////////  INICIO DEL PROGRAMA PRINCIPAL //////////////////////////
+
 
 void main(void)
 {
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    TMR2_Initialize();
-    PWM4_Initialize();
-    UART_init();
     
-    char dato_rx;
+       char dato_rx;
     
     while(1){
-        
-        dato_rx = UART_read();
+       
+               dato_rx = UART_read();
         
         if (dato_rx == 'A') // move forward 50%
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+                
                 PORTBbits.RB4 = 1;                       
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0; 
@@ -129,7 +113,7 @@ void main(void)
         
         else if (dato_rx == 'H') // move forward 75%
         {
-                PWM4_LoadDutyValue(dutyCycle75);
+                
                 PORTBbits.RB4 = 1;                  
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
@@ -142,7 +126,7 @@ void main(void)
         
         else if (dato_rx == 'I') // move forward 100%
         {
-                PWM4_LoadDutyValue(dutyCycle100);
+                
                 PORTBbits.RB4 = 1;                        
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
@@ -155,7 +139,7 @@ void main(void)
         
         else if (dato_rx == 'E') //go back
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+                
                 PORTBbits.RB4 = 0;                        
                 PORTBbits.RB6 = 1;
                 PORTBbits.RB7 = 1;
@@ -168,7 +152,7 @@ void main(void)
       
         else if (dato_rx == 'D') //right turn
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+                
                 PORTBbits.RB4 = 1;                        
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
@@ -180,7 +164,7 @@ void main(void)
         
         else if (dato_rx == 'B') //left turn
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+                
                 PORTBbits.RB4 = 0;                        
                 PORTBbits.RB6 = 1;
                 PORTBbits.RB7 = 0;
@@ -192,7 +176,7 @@ void main(void)
         
         else if (dato_rx == '0') //stop
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+                
                 PORTBbits.RB4 = 0;                        
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 1;
@@ -204,7 +188,7 @@ void main(void)
         
         else if (dato_rx == 'C') // warnings
         {       
-                PWM4_LoadDutyValue(dutyCycle50);
+                
                 PORTCbits.RC6 = 1;          
                 PORTCbits.RC7 = 1;
                 __delay_ms(500);
@@ -213,5 +197,7 @@ void main(void)
                 __delay_ms(300);
                         
         }
-    }
+        
+            }
+        
 }

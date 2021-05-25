@@ -6112,18 +6112,20 @@ void UART_printf(unsigned char *cadena)
 
 
 #pragma config CP = OFF
-# 52 "main.c"
-uint16_t dutyCycle50 = 50;
-uint16_t dutyCycle75 = 75;
-uint16_t dutyCycle100 = 100;
+# 53 "main.c"
+uint16_t dutyCycle50 = 32768;
+uint16_t dutyCycle75 = 49152;
+uint16_t dutyCycle100 = 65500;
 
+uint16_t v_dutyCycle = 0;
 
-
-void PIN_MANAGER_Initialize(void) {
+void PIN_MANAGER_Initialize(void)
+{
 
     LATA = 0x00;
     LATB = 0x00;
     LATC = 0x00;
+
 
 
     TRISBbits.TRISB4 = 0;
@@ -6134,53 +6136,34 @@ void PIN_MANAGER_Initialize(void) {
     TRISCbits.TRISC6 = 0;
     TRISCbits.TRISC7 = 0;
 
-}
+    }
 
-void OSCILLATOR_Initialize(void) {
+
+
+void OSCILLATOR_Initialize(void)
+{
     OSCEN = 0x00;
     OSCFRQ = 0x00;
     OSCTUNE = 0x00;
 }
 
-void TMR2_Initialize(void) {
-    T2CLKCON = 0x01;
-    T2HLT = 0x00;
-    T2RST = 0x00;
-    T2PR = 249;
-    T2TMR = 0x00;
-    PIR1bits.TMR2IF = 0;
-    T2CON = 0b10000000;
-}
 
-void PWM4_Initialize(void) {
-    PWM4CON = 0x90;
-    PWM4DCH = 0x3E;
-    PWM4DCL = 0x40;
-}
-
-void PWM4_LoadDutyValue(uint16_t dutyValue) {
-    PWM4DCH = (dutyValue & 0x03FC) >> 2;
-    PWM4DCL = (dutyValue & 0x0003) << 6;
-}
 
 
 void main(void)
 {
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    TMR2_Initialize();
-    PWM4_Initialize();
-    UART_init();
 
-    char dato_rx;
+       char dato_rx;
 
     while(1){
 
-        dato_rx = UART_read();
+               dato_rx = UART_read();
 
         if (dato_rx == 'A')
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+
                 PORTBbits.RB4 = 1;
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
@@ -6193,7 +6176,7 @@ void main(void)
 
         else if (dato_rx == 'H')
         {
-                PWM4_LoadDutyValue(dutyCycle75);
+
                 PORTBbits.RB4 = 1;
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
@@ -6204,9 +6187,9 @@ void main(void)
 
         }
 
-                else if (dato_rx == 'I')
+        else if (dato_rx == 'I')
         {
-                PWM4_LoadDutyValue(dutyCycle100);
+
                 PORTBbits.RB4 = 1;
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
@@ -6219,7 +6202,7 @@ void main(void)
 
         else if (dato_rx == 'E')
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+
                 PORTBbits.RB4 = 0;
                 PORTBbits.RB6 = 1;
                 PORTBbits.RB7 = 1;
@@ -6232,31 +6215,31 @@ void main(void)
 
         else if (dato_rx == 'D')
         {
-                PWM4_LoadDutyValue(dutyCycle50);
-                PORTBbits.RB4 = 0;
+
+                PORTBbits.RB4 = 1;
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;
+                PORTCbits.RC4 = 1;
                 PORTCbits.RC5 = 0;
                 PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
+                PORTCbits.RC7 = 1;
         }
 
         else if (dato_rx == 'B')
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+
                 PORTBbits.RB4 = 0;
-                PORTBbits.RB6 = 0;
+                PORTBbits.RB6 = 1;
                 PORTBbits.RB7 = 0;
                 PORTCbits.RC4 = 0;
-                PORTCbits.RC5 = 0;
+                PORTCbits.RC5 = 1;
                 PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
+                PORTCbits.RC7 = 1;
         }
 
         else if (dato_rx == '0')
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+
                 PORTBbits.RB4 = 0;
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 1;
@@ -6268,7 +6251,7 @@ void main(void)
 
         else if (dato_rx == 'C')
         {
-                PWM4_LoadDutyValue(dutyCycle50);
+
                 PORTCbits.RC6 = 1;
                 PORTCbits.RC7 = 1;
                 _delay((unsigned long)((500)*(1000000/4000.0)));
@@ -6277,5 +6260,7 @@ void main(void)
                 _delay((unsigned long)((300)*(1000000/4000.0)));
 
         }
-    }
+
+            }
+
 }

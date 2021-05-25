@@ -13,7 +13,11 @@ Initially it must be ensured that the entire device is powered by a source of at
 
 Download the APK of the application, go to the file manager to find the APK previously downloaded (if it is the first time you are going to install an APK from the file manager it will ask for permissions to do the installation, follow the steps that appear on the screen), at the end of the installation go to the main screen to start the application.
 
+![APP](https://i.imgur.com/hbXglhE.jpg)
+
 #  Information about PIC16F15244 Curiosity Nano Evaluation Kit
+
+![PIC16F15244](https://i.imgur.com/DyVkeEG.jpg?1)
 
 * [PIC16F15244](https://www.microchip.com/wwwproducts/en/PIC16F15244)
 
@@ -33,3 +37,4 @@ Download the APK of the application, go to the file manager to find the APK prev
 
 * [MPLAB-X-IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide)
 # Schematic circuit
+![Schematic circuit](https://i.imgur.com/m2u3VGT.jpg)

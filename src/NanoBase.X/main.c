@@ -98,14 +98,14 @@ void main(void)
        
                dato_rx = UART_read();
         
-        if (dato_rx == 'A') // move forward 50%
+        if (dato_rx == 'A') // move forward 
         {
                 
-                PORTBbits.RB4 = 1;                       
+                PORTBbits.RB4 = 1;        
+                PORTCbits.RC4 = 1;
                 PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0; 
-                PORTCbits.RC4 = 0;          
-                PORTCbits.RC5 = 1;          
+                PORTBbits.RB7 = 0;
+                PORTCbits.RC5 = 0;          
                 PORTCbits.RC6 = 0;          
                 PORTCbits.RC7 = 0; 
             
@@ -114,11 +114,11 @@ void main(void)
         else if (dato_rx == 'E') //go back
         {
                 
-                PORTBbits.RB4 = 0;                        
                 PORTBbits.RB6 = 1;
-                PORTBbits.RB7 = 1;
-                PORTCbits.RC4 = 1;          
-                PORTCbits.RC5 = 0;          
+                PORTCbits.RC5 = 1;
+                PORTBbits.RB4 = 0;                        
+                PORTBbits.RB7 = 0;
+                PORTCbits.RC4 = 0;          
                 PORTCbits.RC6 = 0;          
                 PORTCbits.RC7 = 0; 
             
@@ -127,25 +127,27 @@ void main(void)
         else if (dato_rx == 'D') //right turn
         {
                 
-                PORTBbits.RB4 = 1;                        
+                PORTCbits.RC5 = 1;
+                PORTBbits.RB4 = 1;
+                PORTCbits.RC6 = 1;           
                 PORTBbits.RB6 = 0;
                 PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 1;          
-                PORTCbits.RC5 = 0;          
-                PORTCbits.RC6 = 0;          
-                PORTCbits.RC7 = 1; 
+                PORTCbits.RC4 = 0;
+                PORTCbits.RC7 = 0; 
+                
         }
         
         else if (dato_rx == 'B') //left turn
         {
                 
-                PORTBbits.RB4 = 0;                        
                 PORTBbits.RB6 = 1;
+                PORTCbits.RC4 = 1; 
+                PORTCbits.RC7 = 1;
+                PORTBbits.RB4 = 0;
                 PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;          
-                PORTCbits.RC5 = 1;          
+                PORTCbits.RC5 = 0;          
                 PORTCbits.RC6 = 0;          
-                PORTCbits.RC7 = 1; 
+                
         }
         
         else if (dato_rx == '0') //stop
@@ -158,6 +160,7 @@ void main(void)
                 PORTCbits.RC5 = 0;          
                 PORTCbits.RC6 = 0;          
                 PORTCbits.RC7 = 0; 
+                
         }
         
         else if (dato_rx == 'C') // warnings

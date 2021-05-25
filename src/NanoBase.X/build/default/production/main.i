@@ -6160,82 +6160,61 @@ void main(void)
 
     while(1){
 
-               dato_rx = UART_read();
 
-        if (dato_rx == 'A')
-        {
 
-                PORTBbits.RB4 = 1;
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;
-                PORTCbits.RC5 = 1;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
+        PORTCbits.RC5 = 1;
+        PORTBbits.RB4 = 1;
+        PORTCbits.RC6 = 1;
+        _delay((unsigned long)((10000)*(1000000/4000.0)));
 
-        }
 
-        else if (dato_rx == 'E')
-        {
+        PORTCbits.RC5 = 0;
+        PORTBbits.RB4 = 0;
+        PORTCbits.RC6 = 0;
+        _delay((unsigned long)((1000)*(1000000/4000.0)));
 
-                PORTBbits.RB4 = 0;
-                PORTBbits.RB6 = 1;
-                PORTBbits.RB7 = 1;
-                PORTCbits.RC4 = 1;
-                PORTCbits.RC5 = 0;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
 
-        }
 
-        else if (dato_rx == 'D')
-        {
+        PORTBbits.RB6 = 1;
+        PORTCbits.RC4 = 1;
+        PORTCbits.RC7 = 1;
+        _delay((unsigned long)((10000)*(1000000/4000.0)));
 
-                PORTBbits.RB4 = 1;
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 1;
-                PORTCbits.RC5 = 0;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 1;
-        }
 
-        else if (dato_rx == 'B')
-        {
+        PORTBbits.RB6 = 0;
+        PORTCbits.RC4 = 0;
+        PORTCbits.RC7 = 1;
+        _delay((unsigned long)((1000)*(1000000/4000.0)));
 
-                PORTBbits.RB4 = 0;
-                PORTBbits.RB6 = 1;
-                PORTBbits.RB7 = 0;
-                PORTCbits.RC4 = 0;
-                PORTCbits.RC5 = 1;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 1;
-        }
 
-        else if (dato_rx == '0')
-        {
 
-                PORTBbits.RB4 = 0;
-                PORTBbits.RB6 = 0;
-                PORTBbits.RB7 = 1;
-                PORTCbits.RC4 = 0;
-                PORTCbits.RC5 = 0;
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
-        }
+        PORTBbits.RB4 = 1;
+        PORTCbits.RC4 = 1;
+        _delay((unsigned long)((10000)*(1000000/4000.0)));
 
-        else if (dato_rx == 'C')
-        {
 
-                PORTCbits.RC6 = 1;
-                PORTCbits.RC7 = 1;
-                _delay((unsigned long)((500)*(1000000/4000.0)));
-                PORTCbits.RC6 = 0;
-                PORTCbits.RC7 = 0;
-                _delay((unsigned long)((300)*(1000000/4000.0)));
+        PORTBbits.RB4 = 0;
+        PORTCbits.RC4 = 0;
+        _delay((unsigned long)((1000)*(1000000/4000.0)));
 
-        }
 
-            }
 
+        PORTBbits.RB6 = 1;
+        PORTCbits.RC5 = 1;
+
+        _delay((unsigned long)((10000)*(1000000/4000.0)));
+
+
+        PORTBbits.RB6 = 0;
+        PORTCbits.RC5 = 0;
+        _delay((unsigned long)((1000)*(1000000/4000.0)));
+
+
+
+        PORTBbits.RB7 = 1;
+        _delay((unsigned long)((10000)*(1000000/4000.0)));
+
+        PORTBbits.RB7 = 0;
+        _delay((unsigned long)((1000)*(1000000/4000.0)));
+    }
 }

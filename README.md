@@ -17,7 +17,7 @@ The MCU must be powered after being connected to the bluetooth module and the L2
 
 * Para visualizar la comunicación serial se utilizo la aplicación "Bluetooth SPP".
 
-![Bluetooth SPP](https://imgur.com/JQsUVjX)
+![Bluetooth SPP](https://i.imgur.com/JQsUVjX.jpg)
 
 
 
@@ -48,4 +48,4 @@ The MCU must be powered after being connected to the bluetooth module and the L2
 *[Data Visualizer](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-data-visualizer).
 
 # Schematic circuit
-![Schematic circuit](https://imgur.com/u8DykT3)
+![Schematic circuit](https://i.imgur.com/u8DykT3.jpg)

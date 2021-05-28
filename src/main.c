@@ -15,14 +15,14 @@ void main(void)
 {
     EUSART1_Initialize();
     SYSTEM_Initialize();
-    printf("INICIO \n\r");
+    printf("INICIO SECUENCIA \n\r");
 
     while (1)
     {
 
        ////////Macro to turn right////////
 
-        printf("El dispositivo est� girando a la derecha \n\r");
+        printf("El dispositivo esta girando a la derecha \n\r");
         IO_RB4_SetHigh();
         IO_RB6_SetLow();
         IO_RB7_SetLow();
@@ -30,11 +30,13 @@ void main(void)
         IO_RC5_SetHigh();
         IO_RC6_SetHigh();
         IO_RC7_SetLow();
-        __delay_ms(15000);
         printf("---------------------------------------------- \n\r");
+        __delay(10000);
+        
+        
         ////////Macro to turn left////////
-
-        printf("El dispositivo est� girando a la izquierda \n\r");
+        
+        printf("El dispositivo esta girando a la izquierda \n\r");
         IO_RB4_SetLow();
         IO_RB6_SetHigh();
         IO_RB7_SetLow();
@@ -42,11 +44,12 @@ void main(void)
         IO_RC5_SetLow();
         IO_RC6_SetLow();
         IO_RC7_SetHigh();
-        __delay_ms(15000);
         printf("---------------------------------------------- \n\r");
+        __delay_ms(10000);
+        
         ////////Macro to advance////////
 
-        printf("El Dispositivo est� avanzando \n\r");
+        printf("El Dispositivo esta avanzando \n\r");
         IO_RB4_SetHigh();
         IO_RB6_SetLow();
         IO_RB7_SetLow();
@@ -54,12 +57,12 @@ void main(void)
         IO_RC5_SetLow();
         IO_RC6_SetLow();
         IO_RC7_SetLow();
-        __delay_ms(15000);
         printf("---------------------------------------------- \n\r");
+        __delay_ms(10000);
+        
         ////////Macro to go back////////
 
-        printf("El Dispositivo est� retrocediendo \n\r");
-        
+        printf("El Dispositivo esta retrocediendo \n\r");
         IO_RB4_SetLow();
         IO_RB6_SetHigh();
         IO_RB7_SetHigh();
@@ -67,11 +70,12 @@ void main(void)
         IO_RC5_SetHigh();
         IO_RC6_SetHigh();
         IO_RC7_SetHigh();
-        __delay_ms(15000);
         printf("---------------------------------------------- \n\r");
-                ////////Macro to stop////////
+        __delay_ms(10000);
+        
+        ////////Macro to stop////////
 
-        printf("El Dispositivo est� detenido \n\r");
+        printf("El Dispositivo esta detenido \n\r");
         IO_RB4_SetLow();
         IO_RB6_SetLow();
         IO_RB7_SetHigh();
@@ -79,8 +83,8 @@ void main(void)
         IO_RC5_SetLow();
         IO_RC6_SetLow();
         IO_RC7_SetLow();
-        __delay_ms(1000);
         printf("---------------------------------------------- \n\r");
+        __delay_ms(10000);
     }
 }
 

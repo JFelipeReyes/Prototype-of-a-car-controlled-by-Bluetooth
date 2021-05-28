@@ -13,35 +13,35 @@
 %PSECTS
 $dist/default/production/src.production.o
 cinit CODE 0 7F5 7F5 B 2
-text1 CODE 0 5F2 5F2 12 2
-text2 CODE 0 626 626 28 2
-text3 CODE 0 6B6 6B6 7A 2
-text4 CODE 0 677 677 3F 2
-text5 CODE 0 5CF 5CF 6 2
-text6 CODE 0 5DB 5DB A 2
-text7 CODE 0 5E5 5E5 D 2
-text8 CODE 0 5B5 5B5 3 2
-text9 CODE 0 64E 64E 29 2
-text10 CODE 0 5B8 5B8 5 2
-text11 CODE 0 604 604 22 2
-text12 CODE 0 5C9 5C9 6 2
-text13 CODE 0 5C3 5C3 6 2
-text14 CODE 0 5BD 5BD 6 2
-nvBANK0 BANK0 1 5B 5B 6 1
-maintext CODE 0 730 730 C5 2
+text1 CODE 0 59E 59E 12 2
+text2 CODE 0 5D2 5D2 28 2
+text3 CODE 0 662 662 7A 2
+text4 CODE 0 623 623 3F 2
+text5 CODE 0 57B 57B 6 2
+text6 CODE 0 587 587 A 2
+text7 CODE 0 591 591 D 2
+text8 CODE 0 561 561 3 2
+text9 CODE 0 5FA 5FA 29 2
+text10 CODE 0 564 564 5 2
+text11 CODE 0 5B0 5B0 22 2
+text12 CODE 0 575 575 6 2
+text13 CODE 0 56F 56F 6 2
+text14 CODE 0 569 569 6 2
+nvBANK0 BANK0 1 5E 5E 6 1
+maintext CODE 0 6DC 6DC 119 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 49 49 12 1
+cstackBANK0 BANK0 1 49 49 15 1
 stringtext1 STRCODE 0 800 800 32 2
-stringtext2 STRCODE 0 832 832 30 2
-stringtext3 STRCODE 0 862 862 2E 2
-stringtext4 STRCODE 0 890 890 27 2
-stringtext5 STRCODE 0 8B7 8B7 23 2
-stringtext6 STRCODE 0 8DA 8DA 22 2
-stringtext7 STRCODE 0 8FC 8FC A 2
+stringtext2 STRCODE 0 832 832 2E 2
+stringtext3 STRCODE 0 860 860 2C 2
+stringtext4 STRCODE 0 88C 88C 25 2
+stringtext5 STRCODE 0 8B1 8B1 21 2
+stringtext6 STRCODE 0 8D2 8D2 20 2
+stringtext7 STRCODE 0 8F2 8F2 A 2
 bssBANK0 BANK0 1 20 20 29 1
-clrtext CODE 0 5D5 5D5 6 2
+clrtext CODE 0 581 581 6 2
 config CONFIG 4 8007 8007 5 2
-$/tmp/xcXgcHnIf.o
+$/tmp/xcXCCGBfc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 5 2
@@ -51,24 +51,24 @@ config CONFIG 4 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 61-6F 1
+RAM 64-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
 RAM 320-32F 1
-BANK0 61-6F 1
+BANK0 64-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-32F 1
-CONST 4-5B4 2
-CONST 906-FFF 2
-ENTRY 4-5B4 2
-ENTRY 906-FFF 2
+CONST 4-560 2
+CONST 8FC-FFF 2
+ENTRY 4-560 2
+ENTRY 8FC-FFF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -124,9 +124,9 @@ SFR60 1E00-1E6F 1
 SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
-STACK 2041-21EF 1
-CODE 4-5B4 2
-CODE 906-FFF 2
+STACK 2044-21EF 1
+CODE 4-560 2
+CODE 8FC-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -138,10 +138,10 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-21EF 1
-STRCODE 4-5B4 2
-STRCODE 906-FFF 2
-STRING 4-5B4 2
-STRING 906-FFF 2
+STRCODE 4-560 2
+STRCODE 8FC-FFF 2
+STRING 4-560 2
+STRING 8FC-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -156,186 +156,187 @@ STRING 906-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/src.production.o
-7F5 cinit CODE >2008:/tmp/xcXCbJBNm.s
-7F5 cinit CODE >2011:/tmp/xcXCbJBNm.s
-7F5 cinit CODE >2050:/tmp/xcXCbJBNm.s
-7F6 cinit CODE >2051:/tmp/xcXCbJBNm.s
-7F7 cinit CODE >2052:/tmp/xcXCbJBNm.s
-7F8 cinit CODE >2053:/tmp/xcXCbJBNm.s
-7F9 cinit CODE >2054:/tmp/xcXCbJBNm.s
-7FA cinit CODE >2055:/tmp/xcXCbJBNm.s
-7FD cinit CODE >2061:/tmp/xcXCbJBNm.s
-7FD cinit CODE >2063:/tmp/xcXCbJBNm.s
-7FE cinit CODE >2064:/tmp/xcXCbJBNm.s
-5BD text14 CODE >174:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5BD text14 CODE >175:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5C2 text14 CODE >176:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5C3 text13 CODE >166:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5C3 text13 CODE >167:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5C8 text13 CODE >168:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5C9 text12 CODE >170:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5C9 text12 CODE >171:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5CE text12 CODE >172:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-604 text11 CODE >66:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-604 text11 CODE >71:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-607 text11 CODE >74:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-609 text11 CODE >77:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-60B text11 CODE >80:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-60D text11 CODE >83:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-60E text11 CODE >86:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-615 text11 CODE >87:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-61C text11 CODE >88:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-623 text11 CODE >90:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-625 text11 CODE >92:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5B8 text10 CODE >59:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5B8 text10 CODE >62:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5BA text10 CODE >64:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5BB text10 CODE >66:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5BC text10 CODE >67:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-64E text9 CODE >55:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-64E text9 CODE >60:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-650 text9 CODE >61:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-651 text9 CODE >62:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-652 text9 CODE >67:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-654 text9 CODE >68:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-656 text9 CODE >69:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-658 text9 CODE >74:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-65B text9 CODE >75:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-65D text9 CODE >76:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-65F text9 CODE >81:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-660 text9 CODE >82:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-661 text9 CODE >83:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-662 text9 CODE >88:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-663 text9 CODE >89:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-664 text9 CODE >90:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-665 text9 CODE >95:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-667 text9 CODE >96:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-669 text9 CODE >97:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-66B text9 CODE >102:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-66D text9 CODE >103:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-66F text9 CODE >104:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-671 text9 CODE >112:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-673 text9 CODE >113:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-676 text9 CODE >114:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
-5B5 text8 CODE >69:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5B5 text8 CODE >72:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5B7 text8 CODE >73:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5E5 text7 CODE >50:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5E5 text7 CODE >53:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5E8 text7 CODE >54:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5EB text7 CODE >55:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5EE text7 CODE >56:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5F1 text7 CODE >57:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
-5DB text6 CODE >132:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5DC text6 CODE >134:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5DC text6 CODE >136:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5E1 text6 CODE >138:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5E4 text6 CODE >139:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5CF text5 CODE >146:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5D0 text5 CODE >148:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-5D4 text5 CODE >149:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
-677 text4 CODE >8:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-677 text4 CODE >12:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-681 text4 CODE >13:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-685 text4 CODE >14:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-686 text4 CODE >15:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-6A5 text4 CODE >15:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-6A9 text4 CODE >15:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-6AD text4 CODE >20:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-6B3 text4 CODE >20:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-6B5 text4 CODE >24:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
-6B6 text3 CODE >692:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6B7 text3 CODE >702:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6C9 text3 CODE >703:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6CF text3 CODE >703:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6D1 text3 CODE >705:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6D5 text3 CODE >706:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6D9 text3 CODE >1372:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6EA text3 CODE >1373:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6F0 text3 CODE >1373:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6F2 text3 CODE >1374:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-6FD text3 CODE >1375:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-702 text3 CODE >1379:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-708 text3 CODE >1379:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-70A text3 CODE >1380:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-70D text3 CODE >1384:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-726 text3 CODE >1385:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-72C text3 CODE >1385:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-72F text3 CODE >1387:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-626 text2 CODE >1390:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-628 text2 CODE >1395:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-62C text2 CODE >1396:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-62E text2 CODE >1397:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-62F text2 CODE >1398:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-640 text2 CODE >1397:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-649 text2 CODE >1400:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-64D text2 CODE >1404:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
-5F2 text1 CODE >5:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
-5F2 text1 CODE >9:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
-5F7 text1 CODE >10:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
-603 text1 CODE >13:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
-730 maintext CODE >14:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-730 maintext CODE >16:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-733 maintext CODE >17:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-736 maintext CODE >18:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-73E maintext CODE >25:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-746 maintext CODE >26:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-748 maintext CODE >27:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-749 maintext CODE >28:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-74A maintext CODE >29:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-74B maintext CODE >30:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-74C maintext CODE >31:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-74D maintext CODE >32:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-74E maintext CODE >33:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-755 maintext CODE >34:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-762 maintext CODE >37:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-76A maintext CODE >38:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-76C maintext CODE >39:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-76D maintext CODE >40:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-76E maintext CODE >41:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-76F maintext CODE >42:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-770 maintext CODE >43:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-771 maintext CODE >44:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-772 maintext CODE >45:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-779 maintext CODE >46:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-786 maintext CODE >49:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-78E maintext CODE >50:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-790 maintext CODE >51:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-791 maintext CODE >52:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-792 maintext CODE >53:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-793 maintext CODE >54:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-794 maintext CODE >55:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-795 maintext CODE >56:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-796 maintext CODE >57:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-79D maintext CODE >58:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7AA maintext CODE >61:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B2 maintext CODE >62:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B4 maintext CODE >63:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B5 maintext CODE >64:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B6 maintext CODE >65:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B7 maintext CODE >66:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B8 maintext CODE >67:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7B9 maintext CODE >68:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7BA maintext CODE >69:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7C1 maintext CODE >70:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7CE maintext CODE >73:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7D6 maintext CODE >74:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7D8 maintext CODE >75:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7D9 maintext CODE >76:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7DA maintext CODE >77:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7DB maintext CODE >78:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7DC maintext CODE >79:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7DD maintext CODE >80:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7DE maintext CODE >81:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-7E5 maintext CODE >82:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
-5D5 clrtext CODE >2039:/tmp/xcXCbJBNm.s
-5D5 clrtext CODE >2040:/tmp/xcXCbJBNm.s
-5D6 clrtext CODE >2041:/tmp/xcXCbJBNm.s
-5D6 clrtext CODE >2042:/tmp/xcXCbJBNm.s
-5D7 clrtext CODE >2043:/tmp/xcXCbJBNm.s
-5D8 clrtext CODE >2044:/tmp/xcXCbJBNm.s
-5D9 clrtext CODE >2045:/tmp/xcXCbJBNm.s
-5DA clrtext CODE >2046:/tmp/xcXCbJBNm.s
+7F5 cinit CODE >1998:/tmp/xcXIcgBIC.s
+7F5 cinit CODE >2001:/tmp/xcXIcgBIC.s
+7F5 cinit CODE >2040:/tmp/xcXIcgBIC.s
+7F6 cinit CODE >2041:/tmp/xcXIcgBIC.s
+7F7 cinit CODE >2042:/tmp/xcXIcgBIC.s
+7F8 cinit CODE >2043:/tmp/xcXIcgBIC.s
+7F9 cinit CODE >2044:/tmp/xcXIcgBIC.s
+7FA cinit CODE >2045:/tmp/xcXIcgBIC.s
+7FD cinit CODE >2051:/tmp/xcXIcgBIC.s
+7FD cinit CODE >2053:/tmp/xcXIcgBIC.s
+7FE cinit CODE >2054:/tmp/xcXIcgBIC.s
+569 text14 CODE >174:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+569 text14 CODE >175:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+56E text14 CODE >176:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+56F text13 CODE >166:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+56F text13 CODE >167:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+574 text13 CODE >168:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+575 text12 CODE >170:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+575 text12 CODE >171:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+57A text12 CODE >172:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5B0 text11 CODE >66:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5B0 text11 CODE >71:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5B3 text11 CODE >74:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5B5 text11 CODE >77:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5B7 text11 CODE >80:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5B9 text11 CODE >83:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5BA text11 CODE >86:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5C1 text11 CODE >87:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5C8 text11 CODE >88:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5CF text11 CODE >90:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+5D1 text11 CODE >92:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+564 text10 CODE >59:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+564 text10 CODE >62:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+566 text10 CODE >64:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+567 text10 CODE >66:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+568 text10 CODE >67:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+5FA text9 CODE >55:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+5FA text9 CODE >60:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+5FC text9 CODE >61:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+5FD text9 CODE >62:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+5FE text9 CODE >67:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+600 text9 CODE >68:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+602 text9 CODE >69:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+604 text9 CODE >74:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+607 text9 CODE >75:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+609 text9 CODE >76:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+60B text9 CODE >81:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+60C text9 CODE >82:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+60D text9 CODE >83:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+60E text9 CODE >88:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+60F text9 CODE >89:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+610 text9 CODE >90:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+611 text9 CODE >95:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+613 text9 CODE >96:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+615 text9 CODE >97:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+617 text9 CODE >102:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+619 text9 CODE >103:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+61B text9 CODE >104:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+61D text9 CODE >112:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+61F text9 CODE >113:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+622 text9 CODE >114:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/pin_manager.c
+561 text8 CODE >69:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+561 text8 CODE >72:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+563 text8 CODE >73:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+591 text7 CODE >50:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+591 text7 CODE >53:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+594 text7 CODE >54:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+597 text7 CODE >55:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+59A text7 CODE >56:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+59D text7 CODE >57:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/mcc.c
+587 text6 CODE >132:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+588 text6 CODE >134:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+588 text6 CODE >136:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+58D text6 CODE >138:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+590 text6 CODE >139:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+57B text5 CODE >146:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+57C text5 CODE >148:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+580 text5 CODE >149:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/mcc_generated_files/eusart1.c
+623 text4 CODE >8:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+623 text4 CODE >12:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+62D text4 CODE >13:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+631 text4 CODE >14:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+632 text4 CODE >15:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+651 text4 CODE >15:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+655 text4 CODE >15:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+659 text4 CODE >20:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+65F text4 CODE >20:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+661 text4 CODE >24:/opt/microchip/xc8/v2.32/pic/sources/c99/common/nf_fputc.c
+662 text3 CODE >692:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+663 text3 CODE >702:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+675 text3 CODE >703:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+67B text3 CODE >703:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+67D text3 CODE >705:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+681 text3 CODE >706:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+685 text3 CODE >1372:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+696 text3 CODE >1373:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+69C text3 CODE >1373:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+69E text3 CODE >1374:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6A9 text3 CODE >1375:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6AE text3 CODE >1379:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6B4 text3 CODE >1379:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6B6 text3 CODE >1380:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6B9 text3 CODE >1384:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6D2 text3 CODE >1385:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6D8 text3 CODE >1385:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+6DB text3 CODE >1387:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5D2 text2 CODE >1390:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5D4 text2 CODE >1395:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5D8 text2 CODE >1396:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5DA text2 CODE >1397:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5DB text2 CODE >1398:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5EC text2 CODE >1397:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5F5 text2 CODE >1400:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+5F9 text2 CODE >1404:/opt/microchip/xc8/v2.32/pic/sources/c99/common/doprnt.c
+59E text1 CODE >5:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
+59E text1 CODE >9:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
+5A3 text1 CODE >10:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
+5AF text1 CODE >13:/opt/microchip/xc8/v2.32/pic/sources/c99/common/printf.c
+6DC maintext CODE >14:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+6DC maintext CODE >16:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+6DF maintext CODE >17:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+6E2 maintext CODE >19:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+6E4 maintext CODE >21:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+6EB maintext CODE >28:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+6FF maintext CODE >30:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+700 maintext CODE >31:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+701 maintext CODE >32:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+702 maintext CODE >33:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+703 maintext CODE >34:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+704 maintext CODE >35:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+705 maintext CODE >36:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+706 maintext CODE >37:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+713 maintext CODE >38:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+727 maintext CODE >42:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+73A maintext CODE >43:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+73B maintext CODE >44:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+73C maintext CODE >45:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+73D maintext CODE >46:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+73E maintext CODE >47:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+73F maintext CODE >48:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+740 maintext CODE >49:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+741 maintext CODE >50:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+74E maintext CODE >51:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+762 maintext CODE >55:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+769 maintext CODE >57:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+76B maintext CODE >58:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+76C maintext CODE >59:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+76D maintext CODE >60:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+76E maintext CODE >61:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+76F maintext CODE >62:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+770 maintext CODE >63:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+771 maintext CODE >64:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+77E maintext CODE >65:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+792 maintext CODE >69:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+799 maintext CODE >70:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+79B maintext CODE >71:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+79C maintext CODE >72:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+79D maintext CODE >73:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+79E maintext CODE >74:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+79F maintext CODE >75:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7A0 maintext CODE >76:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7A1 maintext CODE >77:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7AE maintext CODE >78:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7C2 maintext CODE >82:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7C9 maintext CODE >84:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7CB maintext CODE >85:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7CC maintext CODE >86:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7CD maintext CODE >87:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7CE maintext CODE >88:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7CF maintext CODE >89:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7D0 maintext CODE >90:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7D1 maintext CODE >92:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+7DE maintext CODE >93:/home/juanreyes/Escritorio/Repo final E. D. 2/Prototype-of-a-car-controlled-by-Bluetooth/Prototype-of-a-car-controlled-by-Bluetooth/src/main.c
+581 clrtext CODE >2029:/tmp/xcXIcgBIC.s
+581 clrtext CODE >2030:/tmp/xcXIcgBIC.s
+582 clrtext CODE >2031:/tmp/xcXIcgBIC.s
+582 clrtext CODE >2032:/tmp/xcXIcgBIC.s
+583 clrtext CODE >2033:/tmp/xcXIcgBIC.s
+584 clrtext CODE >2034:/tmp/xcXIcgBIC.s
+585 clrtext CODE >2035:/tmp/xcXIcgBIC.s
+586 clrtext CODE >2036:/tmp/xcXIcgBIC.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -349,15 +350,15 @@ $dist/default/production/src.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production/src.production.o
-__Hspace_0 906 0 ABS 0 - -
+__Hspace_0 8FC 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10013 0 ABS 0 - -
 EUSART1_SetErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
-_EUSART1_Initialize C08 0 CODE 0 text11 dist/default/production/src.production.o
+_EUSART1_Initialize B60 0 CODE 0 text11 dist/default/production/src.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_WDT_Initialize B70 0 CODE 0 text8 dist/default/production/src.production.o
+__end_of_WDT_Initialize AC8 0 CODE 0 text8 dist/default/production/src.production.o
 __Hstrings 0 0 ABS 0 strings -
 ?_vfprintf 4E 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
 _LATA 18 0 ABS 0 - dist/default/production/src.production.o
@@ -366,30 +367,30 @@ _LATC 1A 0 ABS 0 - dist/default/production/src.production.o
 _WPUA 1F39 0 ABS 0 - dist/default/production/src.production.o
 _WPUB 1F44 0 ABS 0 - dist/default/production/src.production.o
 _WPUC 1F4F 0 ABS 0 - dist/default/production/src.production.o
-___sp 0 0 STACK 2 stack /tmp/xcXgcHnIf.o
-_main E60 0 CODE 0 maintext dist/default/production/src.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXCCGBfc.o
+_main DB8 0 CODE 0 maintext dist/default/production/src.production.o
 _nout 40 0 BANK0 1 bssBANK0 dist/default/production/src.production.o
 _prec 44 0 BANK0 1 bssBANK0 dist/default/production/src.production.o
 btemp 7E 0 ABS 0 - dist/default/production/src.production.o
-start 4 0 CODE 0 init /tmp/xcXgcHnIf.o
+start 4 0 CODE 0 init /tmp/xcXCCGBfc.o
 __size_of_main 0 0 ABS 0 - dist/default/production/src.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__end_of_vfpfcnvrt E60 0 CODE 0 text3 dist/default/production/src.production.o
+__end_of_vfpfcnvrt DB8 0 CODE 0 text3 dist/default/production/src.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production/src.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production/src.production.o
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXgcHnIf.o
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXgcHnIf.o
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXgcHnIf.o
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXgcHnIf.o
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXgcHnIf.o
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXgcHnIf.o
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXCCGBfc.o
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXCCGBfc.o
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXCCGBfc.o
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXCCGBfc.o
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXCCGBfc.o
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXCCGBfc.o
 __size_of_EUSART1_SetErrorHandler 0 0 ABS 0 - dist/default/production/src.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production/src.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/default/production/src.production.o
 EUSART1_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_vfpfcnvrt D6C 0 CODE 0 text3 dist/default/production/src.production.o
+_vfpfcnvrt CC4 0 CODE 0 text3 dist/default/production/src.production.o
 _ANSELA 1F38 0 ABS 0 - dist/default/production/src.production.o
 _ANSELB 1F43 0 ABS 0 - dist/default/production/src.production.o
 _ANSELC 1F4E 0 ABS 0 - dist/default/production/src.production.o
@@ -400,11 +401,11 @@ EUSART1_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/
 _INLVLA 1F3C 0 ABS 0 - dist/default/production/src.production.o
 _INLVLB 1F47 0 ABS 0 - dist/default/production/src.production.o
 _INLVLC 1F52 0 ABS 0 - dist/default/production/src.production.o
-___stackhi 21EF 0 ABS 0 - /tmp/xcXgcHnIf.o
-___stacklo 2041 0 ABS 0 - /tmp/xcXgcHnIf.o
+___stackhi 21EF 0 ABS 0 - /tmp/xcXCCGBfc.o
+___stacklo 2044 0 ABS 0 - /tmp/xcXCCGBfc.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production/src.production.o
 __size_of_putch 0 0 ABS 0 - dist/default/production/src.production.o
-_PIN_MANAGER_Initialize C9C 0 CODE 0 text9 dist/default/production/src.production.o
+_PIN_MANAGER_Initialize BF4 0 CODE 0 text9 dist/default/production/src.production.o
 start_initialization FEA 0 CODE 0 cinit dist/default/production/src.production.o
 _eusart1RxLastError 48 0 BANK0 1 bssBANK0 dist/default/production/src.production.o
 _ODCONA 1F3A 0 ABS 0 - dist/default/production/src.production.o
@@ -414,20 +415,20 @@ _OSCFRQ 893 0 ABS 0 - dist/default/production/src.production.o
 _RC0PPS 1F20 0 ABS 0 - dist/default/production/src.production.o
 _RC1REG 119 0 ABS 0 - dist/default/production/src.production.o
 _RC1STA 11D 0 ABS 0 - dist/default/production/src.production.o
-__end_of_SYSTEM_Initialize BE4 0 CODE 0 text7 dist/default/production/src.production.o
+__end_of_SYSTEM_Initialize B3C 0 CODE 0 text7 dist/default/production/src.production.o
 _RX1PPS 1ECB 0 ABS 0 - dist/default/production/src.production.o
-clear_ram0 BAA 0 CODE 0 clrtext dist/default/production/src.production.o
+clear_ram0 B02 0 CODE 0 clrtext dist/default/production/src.production.o
 __pcstackBANK0 49 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
 _TX1REG 11A 0 ABS 0 - dist/default/production/src.production.o
 _TX1STA 11E 0 ABS 0 - dist/default/production/src.production.o
-__end_of_printf C08 0 CODE 0 text1 dist/default/production/src.production.o
+__end_of_printf B60 0 CODE 0 text1 dist/default/production/src.production.o
 _EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production/src.production.o
 _EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production/src.production.o
 __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production/src.production.o
 _WDTCON 80C 0 ABS 0 - dist/default/production/src.production.o
 fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
-___int_sp 0 0 STACK 2 stack /tmp/xcXgcHnIf.o
-_EUSART1_Write BB6 0 CODE 0 text6 dist/default/production/src.production.o
+___int_sp 0 0 STACK 2 stack /tmp/xcXCCGBfc.o
+_EUSART1_Write B0E 0 CODE 0 text6 dist/default/production/src.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -620,10 +621,12 @@ __Lsfr61 0 0 ABS 0 sfr61 -
 __Lsfr62 0 0 ABS 0 sfr62 -
 __Lsfr63 0 0 ABS 0 sfr63 -
 __Lstack 0 0 STACK 2 stack -
-_EUSART1_FramingErrorHandler 5F 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
-_EUSART1_OverrunErrorHandler 5D 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
+_EUSART1_FramingErrorHandler 62 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
+_EUSART1_OverrunErrorHandler 60 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
 __size_of_EUSART1_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production/src.production.o
 __size_of_EUSART1_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production/src.production.o
+_PORTBbits D 0 ABS 0 - dist/default/production/src.production.o
+_PORTCbits E 0 ABS 0 - dist/default/production/src.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 4 0 CODE 0 init -
@@ -654,24 +657,25 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production/src.production.o
 __pstringtext2 1064 0 STRCODE 0 stringtext2 dist/default/production/src.production.o
-__pstringtext3 10C4 0 STRCODE 0 stringtext3 dist/default/production/src.production.o
-__pstringtext4 1120 0 STRCODE 0 stringtext4 dist/default/production/src.production.o
-__pstringtext5 116E 0 STRCODE 0 stringtext5 dist/default/production/src.production.o
-__pstringtext6 11B4 0 STRCODE 0 stringtext6 dist/default/production/src.production.o
-__pstringtext7 11F8 0 STRCODE 0 stringtext7 dist/default/production/src.production.o
+__pstringtext3 10C0 0 STRCODE 0 stringtext3 dist/default/production/src.production.o
+__pstringtext4 1118 0 STRCODE 0 stringtext4 dist/default/production/src.production.o
+__pstringtext5 1162 0 STRCODE 0 stringtext5 dist/default/production/src.production.o
+__pstringtext6 11A4 0 STRCODE 0 stringtext6 dist/default/production/src.production.o
+__pstringtext7 11E4 0 STRCODE 0 stringtext7 dist/default/production/src.production.o
 __pstringtext8 0 0 STRCODE 0 stringtext8 dist/default/production/src.production.o
-__pnvBANK0 5B 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
+__pnvBANK0 5E 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production/src.production.o
-__S0 906 0 ABS 0 - -
+__S0 8FC 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _EUSART1_DefaultErrorHandler 0 0 ABS 0 - dist/default/production/src.production.o
-_SYSTEM_Initialize BCA 0 CODE 0 text7 dist/default/production/src.production.o
+_SYSTEM_Initialize B22 0 CODE 0 text7 dist/default/production/src.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXgcHnIf.o
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXCCGBfc.o
+main@Contador 5D 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
@@ -683,13 +687,13 @@ __Lstringtext7 0 0 ABS 0 stringtext7 -
 __Lstringtext8 0 0 ABS 0 stringtext8 -
 vfpfcnvrt@fmt 7A 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
 __size_of_EUSART1_Write 0 0 ABS 0 - dist/default/production/src.production.o
-__ptext10 B70 0 CODE 0 text10 dist/default/production/src.production.o
-__ptext11 C08 0 CODE 0 text11 dist/default/production/src.production.o
-__ptext12 B92 0 CODE 0 text12 dist/default/production/src.production.o
-__ptext13 B86 0 CODE 0 text13 dist/default/production/src.production.o
-__ptext14 B7A 0 CODE 0 text14 dist/default/production/src.production.o
-__end_of_PIN_MANAGER_Initialize CEE 0 CODE 0 text9 dist/default/production/src.production.o
-_EUSART1_ErrorHandler 5B 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
+__ptext10 AC8 0 CODE 0 text10 dist/default/production/src.production.o
+__ptext11 B60 0 CODE 0 text11 dist/default/production/src.production.o
+__ptext12 AEA 0 CODE 0 text12 dist/default/production/src.production.o
+__ptext13 ADE 0 CODE 0 text13 dist/default/production/src.production.o
+__ptext14 AD2 0 CODE 0 text14 dist/default/production/src.production.o
+__end_of_PIN_MANAGER_Initialize C46 0 CODE 0 text9 dist/default/production/src.production.o
+_EUSART1_ErrorHandler 5E 0 BANK0 1 nvBANK0 dist/default/production/src.production.o
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -744,19 +748,17 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext E60 0 CODE 0 maintext dist/default/production/src.production.o
+__pmaintext DB8 0 CODE 0 maintext dist/default/production/src.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf BE4 0 CODE 0 text1 dist/default/production/src.production.o
-_LATBbits 19 0 ABS 0 - dist/default/production/src.production.o
-_LATCbits 1A 0 ABS 0 - dist/default/production/src.production.o
-_EUSART1_SetErrorHandler B7A 0 CODE 0 text14 dist/default/production/src.production.o
-__end_of_EUSART1_SetErrorHandler B86 0 CODE 0 text14 dist/default/production/src.production.o
+_printf B3C 0 CODE 0 text1 dist/default/production/src.production.o
+_EUSART1_SetErrorHandler AD2 0 CODE 0 text14 dist/default/production/src.production.o
+__end_of_EUSART1_SetErrorHandler ADE 0 CODE 0 text14 dist/default/production/src.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production/src.production.o
-__end_of_EUSART1_SetFramingErrorHandler B92 0 CODE 0 text13 dist/default/production/src.production.o
-__end_of_EUSART1_SetOverrunErrorHandler B9E 0 CODE 0 text12 dist/default/production/src.production.o
-__end_of_EUSART1_Write BCA 0 CODE 0 text6 dist/default/production/src.production.o
+__end_of_EUSART1_SetFramingErrorHandler AEA 0 CODE 0 text13 dist/default/production/src.production.o
+__end_of_EUSART1_SetOverrunErrorHandler AF6 0 CODE 0 text12 dist/default/production/src.production.o
+__end_of_EUSART1_Write B22 0 CODE 0 text6 dist/default/production/src.production.o
 _OSCTUNE 892 0 ABS 0 - dist/default/production/src.production.o
 ?_vfpfcnvrt 7A 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -768,7 +770,7 @@ __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits 70D 0 ABS 0 - dist/default/production/src.production.o
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-printf@ap 58 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
+printf@ap 5A 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production/src.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __size_of_printf 0 0 ABS 0 - dist/default/production/src.production.o
@@ -780,19 +782,19 @@ __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 vfpfcnvrt@ap 7B 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
 vfpfcnvrt@fp 7C 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
-__ptext1 BE4 0 CODE 0 text1 dist/default/production/src.production.o
-__ptext2 C4C 0 CODE 0 text2 dist/default/production/src.production.o
-__ptext3 D6C 0 CODE 0 text3 dist/default/production/src.production.o
-__ptext4 CEE 0 CODE 0 text4 dist/default/production/src.production.o
-__ptext5 B9E 0 CODE 0 text5 dist/default/production/src.production.o
-__ptext6 BB6 0 CODE 0 text6 dist/default/production/src.production.o
-__ptext7 BCA 0 CODE 0 text7 dist/default/production/src.production.o
-__ptext8 B6A 0 CODE 0 text8 dist/default/production/src.production.o
-__ptext9 C9C 0 CODE 0 text9 dist/default/production/src.production.o
+__ptext1 B3C 0 CODE 0 text1 dist/default/production/src.production.o
+__ptext2 BA4 0 CODE 0 text2 dist/default/production/src.production.o
+__ptext3 CC4 0 CODE 0 text3 dist/default/production/src.production.o
+__ptext4 C46 0 CODE 0 text4 dist/default/production/src.production.o
+__ptext5 AF6 0 CODE 0 text5 dist/default/production/src.production.o
+__ptext6 B0E 0 CODE 0 text6 dist/default/production/src.production.o
+__ptext7 B22 0 CODE 0 text7 dist/default/production/src.production.o
+__ptext8 AC2 0 CODE 0 text8 dist/default/production/src.production.o
+__ptext9 BF4 0 CODE 0 text9 dist/default/production/src.production.o
 vfprintf@ap 50 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
 vfprintf@fp 53 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
 vfprintf@cfmt 54 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
-_vfprintf C4C 0 CODE 0 text2 dist/default/production/src.production.o
+_vfprintf BA4 0 CODE 0 text2 dist/default/production/src.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -804,7 +806,7 @@ __Hstringtext5 0 0 ABS 0 stringtext5 -
 __Hstringtext6 0 0 ABS 0 stringtext6 -
 __Hstringtext7 0 0 ABS 0 stringtext7 -
 __Hstringtext8 0 0 ABS 0 stringtext8 -
-__end_of_vfprintf C9C 0 CODE 0 text2 dist/default/production/src.production.o
+__end_of_vfprintf BF4 0 CODE 0 text2 dist/default/production/src.production.o
 _SLRCONA 1F3B 0 ABS 0 - dist/default/production/src.production.o
 _SLRCONB 1F46 0 ABS 0 - dist/default/production/src.production.o
 _SLRCONC 1F51 0 ABS 0 - dist/default/production/src.production.o
@@ -815,31 +817,31 @@ _SP1BRGL 11B 0 ABS 0 - dist/default/production/src.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
 __Hend_init 8 0 CODE 0 end_init -
-_EUSART1_SetFramingErrorHandler B86 0 CODE 0 text13 dist/default/production/src.production.o
-_EUSART1_SetOverrunErrorHandler B92 0 CODE 0 text12 dist/default/production/src.production.o
+_EUSART1_SetFramingErrorHandler ADE 0 CODE 0 text13 dist/default/production/src.production.o
+_EUSART1_SetOverrunErrorHandler AEA 0 CODE 0 text12 dist/default/production/src.production.o
 putch@txData 71 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
 __end_of_main FEA 0 CODE 0 maintext dist/default/production/src.production.o
 printf@fmt 56 0 BANK0 1 cstackBANK0 dist/default/production/src.production.o
-__end_of_fputc D6C 0 CODE 0 text4 dist/default/production/src.production.o
+__end_of_fputc CC4 0 CODE 0 text4 dist/default/production/src.production.o
 _OSCEN 891 0 ABS 0 - dist/default/production/src.production.o
 _TRISA 12 0 ABS 0 - dist/default/production/src.production.o
 _TRISB 13 0 ABS 0 - dist/default/production/src.production.o
 _TRISC 14 0 ABS 0 - dist/default/production/src.production.o
-__end_of_putch BAA 0 CODE 0 text5 dist/default/production/src.production.o
+__end_of_putch B02 0 CODE 0 text5 dist/default/production/src.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _flags 46 0 BANK0 1 bssBANK0 dist/default/production/src.production.o
-_fputc CEE 0 CODE 0 text4 dist/default/production/src.production.o
-_putch B9E 0 CODE 0 text5 dist/default/production/src.production.o
+_fputc C46 0 CODE 0 text4 dist/default/production/src.production.o
+_putch AF6 0 CODE 0 text5 dist/default/production/src.production.o
 _width 42 0 BANK0 1 bssBANK0 dist/default/production/src.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production/src.production.o
-_WDT_Initialize B6A 0 CODE 0 text8 dist/default/production/src.production.o
-__end_of_EUSART1_Initialize C4C 0 CODE 0 text11 dist/default/production/src.production.o
-__end_of_OSCILLATOR_Initialize B7A 0 CODE 0 text10 dist/default/production/src.production.o
+_WDT_Initialize AC2 0 CODE 0 text8 dist/default/production/src.production.o
+__end_of_EUSART1_Initialize BA4 0 CODE 0 text11 dist/default/production/src.production.o
+__end_of_OSCILLATOR_Initialize AD2 0 CODE 0 text10 dist/default/production/src.production.o
 __initialization FEA 0 CODE 0 cinit dist/default/production/src.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production/src.production.o
 EUSART1_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production/src.production.o
-_OSCILLATOR_Initialize B70 0 CODE 0 text10 dist/default/production/src.production.o
+_OSCILLATOR_Initialize AC8 0 CODE 0 text10 dist/default/production/src.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -866,26 +868,26 @@ _OSCILLATOR_Initialize B70 0 CODE 0 text10 dist/default/production/src.productio
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F5 FEA B 2
-text1 0 5F2 BE4 12 2
-text2 0 626 C4C 28 2
-text3 0 6B6 D6C 7A 2
-text4 0 677 CEE 3F 2
-text5 0 5CF B9E 6 2
-text6 0 5DB BB6 A 2
-text7 0 5E5 BCA D 2
-text8 0 5B5 B6A 3 2
-text9 0 64E C9C 29 2
-text10 0 5B8 B70 5 2
-text11 0 604 C08 22 2
-text12 0 5C9 B92 6 2
-text13 0 5C3 B86 6 2
-text14 0 5BD B7A 6 2
-maintext 0 730 E60 C5 2
+text1 0 59E B3C 12 2
+text2 0 5D2 BA4 28 2
+text3 0 662 CC4 7A 2
+text4 0 623 C46 3F 2
+text5 0 57B AF6 6 2
+text6 0 587 B0E A 2
+text7 0 591 B22 D 2
+text8 0 561 AC2 3 2
+text9 0 5FA BF4 29 2
+text10 0 564 AC8 5 2
+text11 0 5B0 B60 22 2
+text12 0 575 AEA 6 2
+text13 0 56F ADE 6 2
+text14 0 569 AD2 6 2
+maintext 0 6DC DB8 119 2
 cstackCOMMON 1 70 70 E 1
-stringtext1 0 800 1000 106 2
+stringtext1 0 800 1000 FC 2
 reset_vec 0 0 0 4 2
-bssBANK0 1 20 20 41 1
-clrtext 0 5D5 BAA 6 2
+bssBANK0 1 20 20 44 1
+clrtext 0 581 B02 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

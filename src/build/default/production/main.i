@@ -6256,6 +6256,9 @@ void main(void)
 {
     EUSART1_Initialize();
     SYSTEM_Initialize();
+
+    uint8_t Contador = 0;
+
     printf("INICIO \n\r");
 
     while (1)
@@ -6263,63 +6266,71 @@ void main(void)
 
 
 
-        printf("El dispositivo est� girando a la derecha \n\r");
-        do { LATBbits.LATB4 = 1; } while(0);
-        do { LATBbits.LATB6 = 0; } while(0);
-        do { LATBbits.LATB7 = 0; } while(0);
-        do { LATCbits.LATC4 = 0; } while(0);
-        do { LATCbits.LATC5 = 1; } while(0);
-        do { LATCbits.LATC6 = 1; } while(0);
-        do { LATCbits.LATC7 = 0; } while(0);
-        printf("---------------------------------------------- \n\r");
-        _delay((unsigned long)((10000)*(1000000/4000.0)));
+        printf("El dispositivo est? girando a la derecha \n\r", Contador++);
+
+        PORTBbits.RB4 = 1;
+        PORTCbits.RC4 = 0;
+        PORTBbits.RB6 = 0;
+        PORTBbits.RB7 = 0;
+        PORTCbits.RC5 = 1;
+        PORTCbits.RC6 = 1;
+        PORTCbits.RC7 = 0;
+        _delay((unsigned long)((15000)*(1000000/4000.0)));
+        printf("---------------------------------------------- \n\r", Contador++);
 
 
-        printf("El dispositivo est� girando a la izquierda \n\r");
-        do { LATBbits.LATB4 = 0; } while(0);
-        do { LATBbits.LATB6 = 1; } while(0);
-        do { LATBbits.LATB7 = 0; } while(0);
-        do { LATCbits.LATC4 = 1; } while(0);
-        do { LATCbits.LATC5 = 0; } while(0);
-        do { LATCbits.LATC6 = 0; } while(0);
-        do { LATCbits.LATC7 = 1; } while(0);
-        printf("---------------------------------------------- \n\r");
-        _delay((unsigned long)((10000)*(1000000/4000.0)));
+
+        printf("El dispositivo est? girando a la izquierda \n\r", Contador++);
+        PORTBbits.RB4 = 0;
+        PORTCbits.RC4 = 1;
+        PORTBbits.RB6 = 1;
+        PORTBbits.RB7 = 0;
+        PORTCbits.RC5 = 0;
+        PORTCbits.RC6 = 0;
+        PORTCbits.RC7 = 1;
+        _delay((unsigned long)((15000)*(1000000/4000.0)));
+        printf("---------------------------------------------- \n\r", Contador++);
 
 
-        printf("El Dispositivo est� avanzando \n\r");
-        do { LATBbits.LATB4 = 1; } while(0);
-        do { LATBbits.LATB6 = 0; } while(0);
-        do { LATBbits.LATB7 = 0; } while(0);
-        do { LATCbits.LATC4 = 1; } while(0);
-        do { LATCbits.LATC5 = 0; } while(0);
-        do { LATCbits.LATC6 = 0; } while(0);
-        do { LATCbits.LATC7 = 0; } while(0);
-        printf("---------------------------------------------- \n\r");
-        _delay((unsigned long)((10000)*(1000000/4000.0)));
+
+        printf("El Dispositivo est? avanzando \n\r");
+
+        PORTBbits.RB4 = 1;
+        PORTCbits.RC4 = 1;
+        PORTBbits.RB6 = 0;
+        PORTBbits.RB7 = 0;
+        PORTCbits.RC5 = 0;
+        PORTCbits.RC6 = 0;
+        PORTCbits.RC7 = 0;
+        _delay((unsigned long)((15000)*(1000000/4000.0)));
+        printf("---------------------------------------------- \n\r", Contador++);
 
 
-        printf("El Dispositivo est� retrocediendo \n\r");
-        do { LATBbits.LATB4 = 0; } while(0);
-        do { LATBbits.LATB6 = 1; } while(0);
-        do { LATBbits.LATB7 = 1; } while(0);
-        do { LATCbits.LATC4 = 0; } while(0);
-        do { LATCbits.LATC5 = 1; } while(0);
-        do { LATCbits.LATC6 = 1; } while(0);
-        do { LATCbits.LATC7 = 1; } while(0);
-        printf("---------------------------------------------- \n\r");
-        _delay((unsigned long)((10000)*(1000000/4000.0)));
+
+        printf("El Dispositivo est? retrocediendo \n\r");
+        PORTBbits.RB4 = 0;
+        PORTCbits.RC4 = 0;
+        PORTBbits.RB6 = 1;
+        PORTBbits.RB7 = 1;
+        PORTCbits.RC5 = 1;
+        PORTCbits.RC6 = 1;
+        PORTCbits.RC7 = 1;
+        _delay((unsigned long)((15000)*(1000000/4000.0)));
+        printf("---------------------------------------------- \n\r", Contador++);
 
 
-        printf("El Dispositivo est� detenido \n\r");
-        do { LATBbits.LATB4 = 0; } while(0);
-        do { LATBbits.LATB6 = 0; } while(0);
-        do { LATBbits.LATB7 = 1; } while(0);
-        do { LATCbits.LATC4 = 0; } while(0);
-        do { LATCbits.LATC5 = 0; } while(0);
-        do { LATCbits.LATC6 = 0; } while(0);
-        do { LATCbits.LATC7 = 0; } while(0);
-        printf("---------------------------------------------- \n\r");
-        _delay((unsigned long)((10000)*(1000000/4000.0)));
+
+        printf("El Dispositivo est? detenido \n\r");
+
+        PORTBbits.RB4 = 0;
+        PORTCbits.RC4 = 0;
+        PORTBbits.RB6 = 0;
+        PORTBbits.RB7 = 1;
+        PORTCbits.RC5 = 0;
+        PORTCbits.RC6 = 0;
+        PORTCbits.RC7 = 0;
+
+        _delay((unsigned long)((1000)*(1000000/4000.0)));
+        printf("---------------------------------------------- \n\r", Contador++);
     }
 }

@@ -8,28 +8,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "111 /opt/microchip/xc8/v2.32/pic/include/c99/stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"805 /root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h
-[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 805:     struct {
-[s S47 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S47 . . LATB4 LATB5 LATB6 LATB7 ]
-"804
-[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 804: typedef union {
-[u S46 `S47 1 ]
-[n S46 . . ]
-"813
-[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 813: extern volatile LATBbits_t LATBbits __attribute__((address(0x019)));
-[v _LATBbits `VS46 ~T0 @X0 0 e@25 ]
-"844
-[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 844:     struct {
-[s S49 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S49 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"843
-[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 843: typedef union {
-[u S48 `S49 1 ]
-[n S48 . . ]
-"855
-[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 855: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
-[v _LATCbits `VS48 ~T0 @X0 0 e@26 ]
+"503 /root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h
+[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 503:     struct {
+[s S35 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S35 . . RB4 RB5 RB6 RB7 ]
+"502
+[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 502: typedef union {
+[u S34 `S35 1 ]
+[n S34 . . ]
+"511
+[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 511: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
+[v _PORTBbits `VS34 ~T0 @X0 0 e@13 ]
+"542
+[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 542:     struct {
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"541
+[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 541: typedef union {
+[u S36 `S37 1 ]
+[n S36 . . ]
+"553
+[; ;/root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/proc/pic16f15244.h: 553: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x00E)));
+[v _PORTCbits `VS36 ~T0 @X0 0 e@14 ]
 [v F183 `(v ~T0 @X0 1 tf1`ul ]
 "12 /root/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8/pic/include/builtins.h
 [v __delay `JF183 ~T0 @X0 0 e ]
@@ -595,321 +595,185 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17
 [; ;main.c: 17:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"18
-[; ;main.c: 18:     printf("INICIO \n\r");
-[e ( _printf :s 1C ]
-"20
-[; ;main.c: 20:     while (1)
-[e :U 513 ]
+"19
+[; ;main.c: 19:     uint8_t Contador = 0;
+[v _Contador `uc ~T0 @X0 1 a ]
+[e = _Contador -> -> 0 `i `uc ]
 "21
-[; ;main.c: 21:     {
+[; ;main.c: 21:     printf("INICIO \n\r");
+[e ( _printf :s 1C ]
+"23
+[; ;main.c: 23:     while (1)
+[e :U 513 ]
+"24
+[; ;main.c: 24:     {
 {
-"25
-[; ;main.c: 25:         printf("El dispositivo est� girando a la derecha \n\r");
-[e ( _printf :s 2C ]
-"26
-[; ;main.c: 26:         do { LATBbits.LATB4 = 1; } while(0);
-[e :U 517 ]
-{
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 516 ]
-"27
-[; ;main.c: 27:         do { LATBbits.LATB6 = 0; } while(0);
-[e :U 520 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 519 ]
 "28
-[; ;main.c: 28:         do { LATBbits.LATB7 = 0; } while(0);
-[e :U 523 ]
-{
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 522 ]
-"29
-[; ;main.c: 29:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 526 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 525 ]
+[; ;main.c: 28:         printf("El dispositivo est? girando a la derecha \n\r", Contador++);
+[e ( _printf , (. :s 2C -> ++ _Contador -> -> 1 `i `uc `i ]
 "30
-[; ;main.c: 30:         do { LATCbits.LATC5 = 1; } while(0);
-[e :U 529 ]
-{
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 528 ]
+[; ;main.c: 30:         PORTBbits.RB4 = 1;
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
 "31
-[; ;main.c: 31:         do { LATCbits.LATC6 = 1; } while(0);
-[e :U 532 ]
-{
-[e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
-}
-[e :U 531 ]
+[; ;main.c: 31:         PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
 "32
-[; ;main.c: 32:         do { LATCbits.LATC7 = 0; } while(0);
-[e :U 535 ]
-{
-[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-}
-[e :U 534 ]
+[; ;main.c: 32:         PORTBbits.RB6 = 0;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
 "33
-[; ;main.c: 33:         printf("---------------------------------------------- \n\r");
-[e ( _printf :s 3C ]
+[; ;main.c: 33:         PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
 "34
-[; ;main.c: 34:         _delay((unsigned long)((10000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 34:         PORTCbits.RC5 = 1;
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
+"35
+[; ;main.c: 35:         PORTCbits.RC6 = 1;
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
+"36
+[; ;main.c: 36:         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
 "37
-[; ;main.c: 37:         printf("El dispositivo est� girando a la izquierda \n\r");
-[e ( _printf :s 4C ]
+[; ;main.c: 37:         _delay((unsigned long)((15000)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 15000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "38
-[; ;main.c: 38:         do { LATBbits.LATB4 = 0; } while(0);
-[e :U 538 ]
-{
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 537 ]
-"39
-[; ;main.c: 39:         do { LATBbits.LATB6 = 1; } while(0);
-[e :U 541 ]
-{
-[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-}
-[e :U 540 ]
-"40
-[; ;main.c: 40:         do { LATBbits.LATB7 = 0; } while(0);
-[e :U 544 ]
-{
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 543 ]
-"41
-[; ;main.c: 41:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 547 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 546 ]
+[; ;main.c: 38:         printf("---------------------------------------------- \n\r", Contador++);
+[e ( _printf , (. :s 3C -> ++ _Contador -> -> 1 `i `uc `i ]
 "42
-[; ;main.c: 42:         do { LATCbits.LATC5 = 0; } while(0);
-[e :U 550 ]
-{
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 549 ]
+[; ;main.c: 42:         printf("El dispositivo est? girando a la izquierda \n\r", Contador++);
+[e ( _printf , (. :s 4C -> ++ _Contador -> -> 1 `i `uc `i ]
 "43
-[; ;main.c: 43:         do { LATCbits.LATC6 = 0; } while(0);
-[e :U 553 ]
-{
-[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-}
-[e :U 552 ]
+[; ;main.c: 43:         PORTBbits.RB4 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
 "44
-[; ;main.c: 44:         do { LATCbits.LATC7 = 1; } while(0);
-[e :U 556 ]
-{
-[e = . . _LATCbits 0 7 -> -> 1 `i `uc ]
-}
-[e :U 555 ]
+[; ;main.c: 44:         PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
 "45
-[; ;main.c: 45:         printf("---------------------------------------------- \n\r");
-[e ( _printf :s 5C ]
+[; ;main.c: 45:         PORTBbits.RB6 = 1;
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
 "46
-[; ;main.c: 46:         _delay((unsigned long)((10000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 46:         PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+"47
+[; ;main.c: 47:         PORTCbits.RC5 = 0;
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+"48
+[; ;main.c: 48:         PORTCbits.RC6 = 0;
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
 "49
-[; ;main.c: 49:         printf("El Dispositivo est� avanzando \n\r");
-[e ( _printf :s 6C ]
+[; ;main.c: 49:         PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
 "50
-[; ;main.c: 50:         do { LATBbits.LATB4 = 1; } while(0);
-[e :U 559 ]
-{
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 558 ]
+[; ;main.c: 50:         _delay((unsigned long)((15000)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 15000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "51
-[; ;main.c: 51:         do { LATBbits.LATB6 = 0; } while(0);
-[e :U 562 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 561 ]
-"52
-[; ;main.c: 52:         do { LATBbits.LATB7 = 0; } while(0);
-[e :U 565 ]
-{
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 564 ]
-"53
-[; ;main.c: 53:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 568 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 567 ]
-"54
-[; ;main.c: 54:         do { LATCbits.LATC5 = 0; } while(0);
-[e :U 571 ]
-{
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 570 ]
+[; ;main.c: 51:         printf("---------------------------------------------- \n\r", Contador++);
+[e ( _printf , (. :s 5C -> ++ _Contador -> -> 1 `i `uc `i ]
 "55
-[; ;main.c: 55:         do { LATCbits.LATC6 = 0; } while(0);
-[e :U 574 ]
-{
-[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-}
-[e :U 573 ]
-"56
-[; ;main.c: 56:         do { LATCbits.LATC7 = 0; } while(0);
-[e :U 577 ]
-{
-[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-}
-[e :U 576 ]
+[; ;main.c: 55:         printf("El Dispositivo est? avanzando \n\r");
+[e ( _printf :s 6C ]
 "57
-[; ;main.c: 57:         printf("---------------------------------------------- \n\r");
-[e ( _printf :s 7C ]
+[; ;main.c: 57:         PORTBbits.RB4 = 1;
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
 "58
-[; ;main.c: 58:         _delay((unsigned long)((10000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 58:         PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+"59
+[; ;main.c: 59:         PORTBbits.RB6 = 0;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+"60
+[; ;main.c: 60:         PORTBbits.RB7 = 0;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
 "61
-[; ;main.c: 61:         printf("El Dispositivo est� retrocediendo \n\r");
-[e ( _printf :s 8C ]
+[; ;main.c: 61:         PORTCbits.RC5 = 0;
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
 "62
-[; ;main.c: 62:         do { LATBbits.LATB4 = 0; } while(0);
-[e :U 580 ]
-{
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 579 ]
+[; ;main.c: 62:         PORTCbits.RC6 = 0;
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
 "63
-[; ;main.c: 63:         do { LATBbits.LATB6 = 1; } while(0);
-[e :U 583 ]
-{
-[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-}
-[e :U 582 ]
+[; ;main.c: 63:         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
 "64
-[; ;main.c: 64:         do { LATBbits.LATB7 = 1; } while(0);
-[e :U 586 ]
-{
-[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 585 ]
+[; ;main.c: 64:         _delay((unsigned long)((15000)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 15000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "65
-[; ;main.c: 65:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 589 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 588 ]
-"66
-[; ;main.c: 66:         do { LATCbits.LATC5 = 1; } while(0);
-[e :U 592 ]
-{
-[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 591 ]
-"67
-[; ;main.c: 67:         do { LATCbits.LATC6 = 1; } while(0);
-[e :U 595 ]
-{
-[e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
-}
-[e :U 594 ]
-"68
-[; ;main.c: 68:         do { LATCbits.LATC7 = 1; } while(0);
-[e :U 598 ]
-{
-[e = . . _LATCbits 0 7 -> -> 1 `i `uc ]
-}
-[e :U 597 ]
+[; ;main.c: 65:         printf("---------------------------------------------- \n\r", Contador++);
+[e ( _printf , (. :s 7C -> ++ _Contador -> -> 1 `i `uc `i ]
 "69
-[; ;main.c: 69:         printf("---------------------------------------------- \n\r");
-[e ( _printf :s 9C ]
+[; ;main.c: 69:         printf("El Dispositivo est? retrocediendo \n\r");
+[e ( _printf :s 8C ]
 "70
-[; ;main.c: 70:         _delay((unsigned long)((10000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 70:         PORTBbits.RB4 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"71
+[; ;main.c: 71:         PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"72
+[; ;main.c: 72:         PORTBbits.RB6 = 1;
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
 "73
-[; ;main.c: 73:         printf("El Dispositivo est� detenido \n\r");
-[e ( _printf :s 10C ]
+[; ;main.c: 73:         PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
 "74
-[; ;main.c: 74:         do { LATBbits.LATB4 = 0; } while(0);
-[e :U 601 ]
-{
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 600 ]
+[; ;main.c: 74:         PORTCbits.RC5 = 1;
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
 "75
-[; ;main.c: 75:         do { LATBbits.LATB6 = 0; } while(0);
-[e :U 604 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
-[e :U 603 ]
+[; ;main.c: 75:         PORTCbits.RC6 = 1;
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
 "76
-[; ;main.c: 76:         do { LATBbits.LATB7 = 1; } while(0);
-[e :U 607 ]
-{
-[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 606 ]
+[; ;main.c: 76:         PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
 "77
-[; ;main.c: 77:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 610 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 609 ]
+[; ;main.c: 77:         _delay((unsigned long)((15000)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 15000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "78
-[; ;main.c: 78:         do { LATCbits.LATC5 = 0; } while(0);
-[e :U 613 ]
-{
-[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
-}
-[e :U 612 ]
-"79
-[; ;main.c: 79:         do { LATCbits.LATC6 = 0; } while(0);
-[e :U 616 ]
-{
-[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-}
-[e :U 615 ]
-"80
-[; ;main.c: 80:         do { LATCbits.LATC7 = 0; } while(0);
-[e :U 619 ]
-{
-[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-}
-[e :U 618 ]
-"81
-[; ;main.c: 81:         printf("---------------------------------------------- \n\r");
-[e ( _printf :s 11C ]
+[; ;main.c: 78:         printf("---------------------------------------------- \n\r", Contador++);
+[e ( _printf , (. :s 9C -> ++ _Contador -> -> 1 `i `uc `i ]
 "82
-[; ;main.c: 82:         _delay((unsigned long)((10000)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"83
-[; ;main.c: 83:     }
+[; ;main.c: 82:         printf("El Dispositivo est? detenido \n\r");
+[e ( _printf :s 10C ]
+"84
+[; ;main.c: 84:         PORTBbits.RB4 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"85
+[; ;main.c: 85:         PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+"86
+[; ;main.c: 86:         PORTBbits.RB6 = 0;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:         PORTBbits.RB7 = 1;
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+"88
+[; ;main.c: 88:         PORTCbits.RC5 = 0;
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89:         PORTCbits.RC6 = 0;
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
+"90
+[; ;main.c: 90:         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+"92
+[; ;main.c: 92:         _delay((unsigned long)((1000)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"93
+[; ;main.c: 93:         printf("---------------------------------------------- \n\r", Contador++);
+[e ( _printf , (. :s 11C -> ++ _Contador -> -> 1 `i `uc `i ]
+"94
+[; ;main.c: 94:     }
 }
 [e :U 512 ]
 [e $U 513  ]
 [e :U 514 ]
-"84
-[; ;main.c: 84: }
+"95
+[; ;main.c: 95: }
 [e :UE 511 ]
 }
 [p f _printf 8388608 ]
-[a 8C 69 108 32 68 105 115 112 111 115 105 116 105 118 111 32 101 115 116 18446744073709551599 18446744073709551551 18446744073709551549 32 114 101 116 114 111 99 101 100 105 101 110 100 111 32 10 13 0 ]
-[a 6C 69 108 32 68 105 115 112 111 115 105 116 105 118 111 32 101 115 116 18446744073709551599 18446744073709551551 18446744073709551549 32 97 118 97 110 122 97 110 100 111 32 10 13 0 ]
-[a 10C 69 108 32 68 105 115 112 111 115 105 116 105 118 111 32 101 115 116 18446744073709551599 18446744073709551551 18446744073709551549 32 100 101 116 101 110 105 100 111 32 10 13 0 ]
-[a 2C 69 108 32 100 105 115 112 111 115 105 116 105 118 111 32 101 115 116 18446744073709551599 18446744073709551551 18446744073709551549 32 103 105 114 97 110 100 111 32 97 32 108 97 32 100 101 114 101 99 104 97 32 10 13 0 ]
-[a 4C 69 108 32 100 105 115 112 111 115 105 116 105 118 111 32 101 115 116 18446744073709551599 18446744073709551551 18446744073709551549 32 103 105 114 97 110 100 111 32 97 32 108 97 32 105 122 113 117 105 101 114 100 97 32 10 13 0 ]
+[a 8C 69 108 32 68 105 115 112 111 115 105 116 105 118 111 32 101 115 116 63 32 114 101 116 114 111 99 101 100 105 101 110 100 111 32 10 13 0 ]
+[a 6C 69 108 32 68 105 115 112 111 115 105 116 105 118 111 32 101 115 116 63 32 97 118 97 110 122 97 110 100 111 32 10 13 0 ]
+[a 10C 69 108 32 68 105 115 112 111 115 105 116 105 118 111 32 101 115 116 63 32 100 101 116 101 110 105 100 111 32 10 13 0 ]
+[a 2C 69 108 32 100 105 115 112 111 115 105 116 105 118 111 32 101 115 116 63 32 103 105 114 97 110 100 111 32 97 32 108 97 32 100 101 114 101 99 104 97 32 10 13 0 ]
+[a 4C 69 108 32 100 105 115 112 111 115 105 116 105 118 111 32 101 115 116 63 32 103 105 114 97 110 100 111 32 97 32 108 97 32 105 122 113 117 105 101 114 100 97 32 10 13 0 ]
 [a 1C 73 78 73 67 73 79 32 10 13 0 ]
 [a 3C 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 32 10 13 0 ]
 [a 5C 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 45 32 10 13 0 ]

@@ -15,82 +15,129 @@ void main(void)
 {
     EUSART1_Initialize();
     SYSTEM_Initialize();
-    
-    uint8_t Contador = 0;
-    
     printf("INICIO \n\r");
 
     while (1)
     {
 
        ////////Macro to turn right////////
-
-        printf("El dispositivo est? girando a la derecha \n\r", Contador++);
-        
-        PORTBbits.RB4 = 1;
-        PORTCbits.RC4 = 0;
-        PORTBbits.RB6 = 0;
-        PORTBbits.RB7 = 0;
-        PORTCbits.RC5 = 1;
-        PORTCbits.RC6 = 1;
-        PORTCbits.RC7 = 0;
-        __delay_ms(15000);
-        printf("---------------------------------------------- \n\r", Contador++);
+        printf("/ THE PROTOTYPE IS TURNING RIGHT \n\r");
+        printf("/ \n\r");
+        IO_RB4_SetHigh();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetLow();
+        IO_RC5_SetHigh();
+        IO_RC6_SetHigh();
+        IO_RC7_SetLow();
+        __delay_ms(500);
+        /////////////////////////
+        IO_RB4_SetLow();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetLow();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
         
         ////////Macro to turn left////////
-
-        printf("El dispositivo est? girando a la izquierda \n\r", Contador++);
-        PORTBbits.RB4 = 0;
-        PORTCbits.RC4 = 1;
-        PORTBbits.RB6 = 1;
-        PORTBbits.RB7 = 0;
-        PORTCbits.RC5 = 0;
-        PORTCbits.RC6 = 0;
-        PORTCbits.RC7 = 1;
-        __delay_ms(15000);
-        printf("---------------------------------------------- \n\r", Contador++);
+        printf(" THE PROTOTYPE IS TURNING LEFT \n\r");
+        printf("/ \n\r");
+        IO_RB4_SetLow();
+        IO_RB6_SetHigh();
+        IO_RB7_SetLow();
+        IO_RC4_SetHigh();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetHigh();
+        __delay_ms(500);
         
-        ////////Macro to advance////////
-
-        printf("El Dispositivo est? avanzando \n\r");
+        ////////////////////////
         
-        PORTBbits.RB4 = 1;
-        PORTCbits.RC4 = 1;
-        PORTBbits.RB6 = 0;
-        PORTBbits.RB7 = 0;
-        PORTCbits.RC5 = 0;
-        PORTCbits.RC6 = 0;
-        PORTCbits.RC7 = 0;
-        __delay_ms(15000);
-        printf("---------------------------------------------- \n\r", Contador++);
+        IO_RB4_SetLow();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetLow();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
+        
+       ////////Macro to advance////////
+        printf(" THE PROTOTYPE IS MOVING FORWARD \n\r");
+        printf("/ \n\r");
+        IO_RB4_SetHigh();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetHigh();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
+        
+        
+        ////////////////////////////////
+        
+        IO_RB4_SetLow();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetLow();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
         
         ////////Macro to go back////////
-
-        printf("El Dispositivo est? retrocediendo \n\r");
-        PORTBbits.RB4 = 0;
-        PORTCbits.RC4 = 0;
-        PORTBbits.RB6 = 1;
-        PORTBbits.RB7 = 1;
-        PORTCbits.RC5 = 1;
-        PORTCbits.RC6 = 1;
-        PORTCbits.RC7 = 1;
-        __delay_ms(15000);
-        printf("---------------------------------------------- \n\r", Contador++);
+        printf(" THE PROTOTYPE IS RETURNING \n\r");
+        printf("/ \n\r");
         
-                ////////Macro to stop////////
-
-        printf("El Dispositivo est? detenido \n\r");
+        IO_RB4_SetLow();
+        IO_RB6_SetHigh();
+        IO_RB7_SetHigh();
+        IO_RC4_SetLow();
+        IO_RC5_SetHigh();
+        IO_RC6_SetHigh();
+        IO_RC7_SetHigh();
+        __delay_ms(500);
         
-        PORTBbits.RB4 = 0;
-        PORTCbits.RC4 = 0;
-        PORTBbits.RB6 = 0;
-        PORTBbits.RB7 = 1;
-        PORTCbits.RC5 = 0;
-        PORTCbits.RC6 = 0;
-        PORTCbits.RC7 = 0;
+        ////////////////////////////////////
         
-        __delay_ms(1000);
-        printf("---------------------------------------------- \n\r", Contador++);
+         IO_RB4_SetLow();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetLow();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
+        
+        ////////Macro to stop////////
+        printf(" THE PROTOTYPE IS STOPPED \n\r");
+        printf("/ \n\r");
+        IO_RB4_SetLow();
+        IO_RB6_SetLow();
+        IO_RB7_SetHigh();
+        IO_RC4_SetLow();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
+        
+        //////////////////////////////////
+        
+        IO_RB4_SetLow();
+        IO_RB6_SetLow();
+        IO_RB7_SetLow();
+        IO_RC4_SetLow();
+        IO_RC5_SetLow();
+        IO_RC6_SetLow();
+        IO_RC7_SetLow();
+        __delay_ms(500);
+        
+       printf(" /////////////////////////////////////////////////////// \n\r");
+        
+        break;
     }
 }
 
